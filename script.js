@@ -1,5 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 const screens = document.querySelectorAll(".screen");
 const music = document.getElementById("music");
+const startBtn = document.getElementById("startBtn");
 
 let correctChest = Math.floor(Math.random() * 3);
 let specialHeart = Math.floor(Math.random() * 12);
@@ -12,10 +15,13 @@ window.scrollTo(0,0);
 }
 
 function startGame(){
-music.play();
+music.play().catch(()=>{});
 generateChests();
 changeScreen("chests");
 }
+
+startBtn.addEventListener("click", startGame);
+
 
 function generateChests(){
 const container=document.querySelector(".chest-container");
@@ -110,3 +116,5 @@ style.innerHTML=`
 to{transform:translateY(110vh) rotate(720deg);opacity:0;}
 }`;
 document.head.appendChild(style);
+});
+
