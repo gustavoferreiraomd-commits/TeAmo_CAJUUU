@@ -1,0 +1,158 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', sans-serif;
+}
+
+body{
+min-height:100svh;
+background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+color:white;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+.screen{
+min-height:100svh;
+width:100%;
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px 20px;
+animation:fade .8s ease;
+}
+
+.screen.active{
+display:flex;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+button{
+padding:15px 25px;
+border:none;
+border-radius:30px;
+background:linear-gradient(45deg,#ff4d6d,#ff8fa3);
+color:white;
+font-size:16px;
+cursor:pointer;
+margin-top:20px;
+transition:.3s;
+-webkit-tap-highlight-color: transparent;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+input{
+padding:10px;
+border-radius:20px;
+border:none;
+margin-top:15px;
+font-size:16px;
+text-align:center;
+}
+
+.chest-container{
+display:flex;
+gap:30px;
+margin-top:30px;
+}
+
+.chest{
+font-size:55px;
+cursor:pointer;
+transition:.3s;
+}
+
+.chest:hover{
+transform:scale(1.2);
+}
+
+.scrambled-word{
+font-size:28px;
+letter-spacing:10px;
+margin:20px 0;
+}
+
+#heartsContainer{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:20px;
+max-width:300px;
+}
+
+.heart{
+font-size:32px;
+cursor:pointer;
+transition:.3s;
+}
+
+.heart:hover{
+transform:scale(1.3);
+}
+
+.final-content{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+max-width:700px;
+width:100%;
+box-shadow:0 0 40px rgba(255,77,109,.4);
+}
+
+.love-text{
+margin-top:15px;
+line-height:1.6;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:15px;
+margin-top:25px;
+}
+
+.gallery img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* MOBILE EXTRA */
+@media(max-width:600px){
+
+h1{font-size:22px;}
+h2{font-size:18px;}
+p{font-size:14px;}
+
+button{
+padding:12px 20px;
+font-size:14px;
+}
+
+.chest{
+font-size:45px;
+}
+
+.gallery img{
+height:150px;
+}
+
+}

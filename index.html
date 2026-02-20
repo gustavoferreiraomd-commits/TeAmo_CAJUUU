@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nossa Jornada 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+<!-- INTRO -->
+<section id="intro" class="screen active">
+    <h1>Uma pequena jornada até o meu coração 💘</h1>
+    <button class="main-btn" onclick="startGame()">Começar</button>
+</section>
+
+<!-- BAÚS -->
+<section id="chests" class="screen">
+    <h2>Escolha o baú certo…</h2>
+    <div class="chest-container"></div>
+    <p id="chestMessage"></p>
+</section>
+
+<!-- PUZZLE MEMÓRIA -->
+<section id="memory" class="screen">
+    <h2>Quando tudo começou?</h2>
+    <p>Digite a data do nosso primeiro encontro:</p>
+    <input type="text" id="memoryInput" placeholder="dd/mm/aaaa">
+    <button onclick="checkMemory()">Confirmar</button>
+    <p id="memoryMessage"></p>
+</section>
+
+<!-- PALAVRA -->
+<section id="wordPuzzle" class="screen">
+    <h2>Desembaralhe a palavra:</h2>
+    <div id="scrambled" class="scrambled-word"></div>
+    <input type="text" id="wordInput">
+    <button onclick="checkWord()">Confirmar</button>
+    <p id="wordMessage"></p>
+</section>
+
+<!-- CORAÇÕES -->
+<section id="heartGame" class="screen">
+    <h2>Encontre o coração especial 💖</h2>
+    <div id="heartsContainer"></div>
+</section>
+
+<!-- FINAL -->
+<section id="final" class="screen">
+    <div class="final-content">
+        <h1>💖 Para Você Juju 💖</h1>
+        <p class="love-text">
+            Desde que você apareceu na minha vida, tudo ganhou mais cor,
+            mais sentido, mais alegria. Você é o meu melhor acaso,
+            minha melhor escolha, e a pessoa que eu escolheria mil vezes.
+            Eu te amo infinitamente, cajuzinha. 💞
+        </p>
+
+        <div class="gallery">
+            <img src="foto1.jpeg">
+            <img src="foto2.jpeg">
+            <img src="foto3.jpeg">
+        </div>
+    </div>
+</section>
+
+</div>
+
+<audio id="music" src="music.mp3" loop></audio>
+
+<script src="script.js"></scrip
